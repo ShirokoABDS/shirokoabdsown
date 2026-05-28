@@ -1,41 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/images/icon/12.ico" />
-    <link rel="apple-touch-icon" href="/images/logo/apple-touch-icon.png" />
-    <link rel="bookmark" href="/images/logo/apple-touch-icon.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="200x200" href="/images/logo/apple-touch-icon.png" />
-    <meta name="description" content="ShirokoABDS的个人网站" />
-    <meta name="keywords" content="ShirokoABDS,个人主页" />
-    <meta name="author" content="ShirokoABDS" />
-    <meta name="theme-color" content="#424242" />
-    <title>ShirokoABDSの主页</title>
-    <!-- HarmonyOS Sans -->
-    <!-- 本站 CDN 已开启防盗链，非本站域名不可访问，请更改链接为下方内容，否则自定义字体将失效 -->
-    <link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" />
-    <!-- <link rel="stylesheet" href="https://cdn.imsyy.top/gh/imsyy/file/font/HarmonyOS_Sans/regular.min.css" /> -->
-    <!-- IE Out -->
-    <script>
-      if (/*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode))
-        window.location.href =
-          'https://support.dmeng.net/upgrade-your-browser.html?referrer=' +
-          encodeURIComponent(window.location.href);
-    </script>
-    <script type="module" crossorigin src="/assets/index-f756a160.js"></script>
-    <link rel="stylesheet" href="/assets/index-9df6da63.css">
-  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wtcraft - 我的世界精品多人生存服务器，纯净生存 | 特色RPG | 友好社区。稳定流畅，长期开放，欢迎加入！">
+    <meta name="keywords" content="我的世界, Minecraft, Wtcraft, 生存服务器, RPG, 建筑, 公益服, MC联机, 小游戏">
+    <meta name="author" content="Wtcraft服务器团队 | 基于小狐狸生存服模板二开">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
 
-  <body>
-    <!-- 主体内容 -->
-    <div id="app"></div>
-    <!-- noscript -->
-    <noscript>
-      <div style="text-align: center">请开启 JavaScript</div>
-    </noscript>
+    <link rel="canonical" href="#">
+    <!-- 二开请标注原作者小狐务器 —— 致敬原模板作者 -->
+    <title>Wtcraft · 我的世界生存服务器 | 首页</title>
+    <link rel="dns-prefetch" href="https://mc.163.com">
+    <link rel="dns-prefetch" href="https://www.minecraft.net">
+    <link rel="preload" href="style.css?v=2" as="style">
+    <link rel="preload" href="script.js?v=2" as="script">
+    <link rel="preload" href="./png/c6d2dd6a664242e2e5faa640d28c340b.jpg" as="image" fetchpriority="high">
     
-  </body>
+    <link rel="stylesheet" href="style.css?v=2">
+    
+    <!-- Structured Data (JSON-LD) Wtcraft 品牌更新 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Wtcraft 生存服务器",
+      "description": "高品质多人生存服务器，融合纯净生存、创意建筑、趣味小游戏和温暖社区。",
+      "genre": ["Sandbox", "Survival", "RPG", "Minigame"],
+      "gamePlatform": "PC (Java Edition)",
+      "applicationCategory": "Game",
+      "operatingSystem": "Windows, macOS, Linux",
+      "author": {
+        "@type": "Organization",
+        "name": "Wtcraft 运营团队",
+        "url": "/"
+      },
+      "image": "./wj_Narcissa_3.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+    <!-- SVG Sprite 公用图标库 -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17L4 12"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19"/><path d="M12 5L19 12L12 19"/></symbol>
+        <symbol id="icon-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4H20V20H4V4Z"/><path d="M4 12H20"/><path d="M12 4V20"/></symbol>
+    </svg>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="siteLogo">
+                <svg class="logo-svg" width="32" height="32"><use href="#icon-cube"/></svg>
+                <span class="logo-text">Wtcraft 生存服</span>
+            </a>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#help-docs">帮助</a></li>
+                <li><a href="#features">特色</a></li>
+                <li><a href="#gallery">相册</a></li>
+                <li><a href="#team">团队</a></li>
+                <li><a href="#contact">联系</a></li>
+                <li><a href="#community">社区</a></li>
+                <li><a href="javascript:void(0)" class="nav-register-btn" id="navRegisterBtn">登录/注册</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区 / 首页 -->
+    <header id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <!-- 顶部标签 -->
+                <div class="hero-badge scroll-fade-up">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    ✨ 新周目开荒 | 进服即领新手礼包 ✨
+                </div>
+                
+                <!-- 在线状态 -->
+                <div class="server-status scroll-fade-up delay-200">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Wtcraft 在线人数: <span class="highlight-green">加载中...</span> 冒险家</span>
+                </div>
+
+                <!-- 主标题 -->
+                <h1 class="scroll-fade-up delay-300">
+                    欢迎来到<br>
+                    <span class="highlight">Wtcraft</span>
+                </h1>
+                
+                <!-- 副标题 -->
+                <p class="hero-subtitle scroll-fade-up delay-400">
+                    史诗生存体验 | 匠心公益 | 永不删档
+                </p>
+
+                <!-- 特性列表 -->
+                <div class="hero-features scroll-fade-up delay-500">
+                    <div class="h-feature"><svg width="16" height="16"><use href="#icon-check"/></svg>纯公益·无强制氪金</div>
+                    <div class="h-feature"><svg width="16" height="16"><use href="#icon-check"/></svg>高版本生存+独家玩法</div>
+                    <div class="h-feature"><svg width="16" height="16"><use href="#icon-check"/></svg>温馨社区 · 管理在线</div>
+                </div>
+
+                <!-- 按钮组 -->
+                <div class="hero-buttons scroll-fade-up delay-600">
+                    <input id="toggle" type="checkbox">
+                    <label class="boton-minecraft" for="toggle">
+                        <svg viewBox="0 0 32 32" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 2H2v28h28z" fill="#52a535"></path>
+                            <path d="M24.4 13.2h-5.6v.47h5.6zm-5.6 8.4h-5.6v.47h5.6zm2.8 2.8h-2.8v.47h2.8zm-8.4 0h-2.8v.47h2.8zm0-11.2H7.6v.47h5.6z" fill="#86d562"></path>
+                            <path d="M24.4 13.2V7.6h-5.6v5.6h-5.6V16h-2.8v8.4h2.8v-2.8h5.6v2.8h2.8V16h-2.8v-2.8zM13.2 7.6H7.6v5.6h5.6z"></path>
+                            <path d="M24.4 7.6h-5.6v.47h5.6zm-5.6 5.6h-5.6v.47h5.6zm-5.6-5.6H7.6v.47h5.6zm0 8.4h-2.8v.47h2.8zm8.4 0h-2.8v.47h2.8z" fill="#2a641c"></path>
+                        </svg>
+                        <div class="texto-boton">
+                            <span>复制 服务器地址</span>
+                            <span>点击复制</span>
+                            <span>已复制!</span>
+                        </div>
+                    </label>
+                    <span id="server-ip">play.wtcraft.cc:25565</span>
+                    
+                    <a href="#community" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4H20V20H4V4Z"/><path d="M4 9H20"/></svg>
+                        玩家社区
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 帮助文档区 (加入教程) -->
+    <section id="help-docs" class="help-section" data-bg="url('./png/9cca3afcca8c0a79eac6a39aad5d65ec.jpg')">
+        <div class="container">
+            <div class="section-header scroll-fade-up">
+                <h2 class="section-title">三步加入 Wtcraft</h2>
+                <p class="section-subtitle">轻松开启你的方块史诗旅程</p>
+            </div>
+
+            <div class="steps-container">
+                <!-- Step 1 -->
+                <div class="step-card scroll-fade-up delay-100">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">下载启动器</h3>
+                    <p class="step-desc">使用HMCL、PCL2或官方启动器，Java版1.20.1+ 均可进入。</p>
+                    <a href="#" class="btn-step">下载推荐启动器</a>
+                </div>
+
+                <div class="step-arrow scroll-fade-up delay-200"><svg width="24" height="24"><use href="#icon-arrow-right"/></svg></div>
+
+                <!-- Step 2 -->
+                <div class="step-card scroll-fade-up delay-300">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">添加服务器</h3>
+                    <p class="step-desc">点击多人游戏 → 添加服务器，输入下方地址及端口。</p>
+                    <div class="server-address-box">
+                        <span id="help-ip">play.wtcraft.cc:25565</span>
+                        <button class="copy-btn" aria-label="复制服务器地址">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="step-arrow scroll-fade-up delay-400"><svg width="24" height="24"><use href="#icon-arrow-right"/></svg></div>
+
+                <!-- Step 3 -->
+                <div class="step-card scroll-fade-up delay-500">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3L19 12L5 21V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">进入游戏</h3>
+                    <p class="step-desc">双击服务器，加入Wtcraft世界！使用 /help 查看特色指令。</p>
+                    <span class="highlight-text">⚡ 预祝冒险愉快 ⚡</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏特色模块 (Wtcraft 定制) -->
+
+    </section>
+
+    <!-- 相册轮播区 -->
+    <section id="gallery" class="gallery-section" data-bg="url('./png/f5ea0ca06bf5ac36704b7277536ab53d.jpg')">
+        <div class="container">
+            <div class="section-header scroll-fade-up">
+                <h2 class="section-title">🏞️ 光影时刻 · 玩家佳作</h2>
+                <p class="section-subtitle">来自Wtcraft世界的绝美瞬间</p>
+            </div>
+            <div class="gallery-carousel-container">
+                <div class="gallery-carousel-wrapper" id="galleryWrapper">
+                    <img id="galleryImage" class="gallery-active-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./png/f5ea0ca06bf5ac36704b7277536ab53d.jpg" alt="Wtcraft 游戏截图" decoding="async">
+                </div>
+                <div class="gallery-controls">
+                    <div class="gallery-text-content">
+                        <p id="galleryDescription">宏伟的中世纪主城，由建筑师团队耗时三个月打造，每个角落都藏着故事。</p>
+                    </div>
+                    <div class="gallery-nav-buttons">
+                        <button class="nav-btn prev-btn" id="prevBtn"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></button>
+                        <button class="nav-btn next-btn" id="nextBtn"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 管理团队 -->
+    <section id="team" class="team-section" data-bg="url('./png/achXdg.jpg')">
+        <div class="container">
+            <div class="section-header scroll-fade-up">
+                <h2 class="section-title">✨ Wtcraft 守护者团队</h2>
+                <p class="section-subtitle">专业 · 耐心 · 热爱，伴你同行</p>
+            </div>
+            <div class="team-carousel-container scroll-fade-up delay-200">
+                <div class="team-carousel-wrapper" id="teamWrapper">
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://d6.qyshare.store/s/TBVWTxUNFVQHU1NRBwNRGgNUVVYaKFCVA50wNWVRoOUQcBGgJWVQ4HKFCVA50gIBKFCVA50KFCVA50IHUxUbFVhERH9YREMVDRVYREQZRk5CWRlYRVKFCVA50VGxVYRER8Uk4VDRVCR1tYVlMYBQcFKFCVA50RgHKFCVA50hgFBBhVUlVRVlQDBhoCDg8GGgMCKFCVA50wKFCVA50aVlZRVRpUBQQDUgQEKFCVA50gQBKFCVA50wEZVV5ZFRsVVlQVDRVWDgNVBVMDURoPVFEGGgMKFCVA50DwUaD1RRDhoPUwFUVKFCVA50dSKFCVA50KFCVA50RTUVEVGxVZVlpSFQ0VZF9eRVhcWHZ1c2QZR1lQFRsVVFhZQ1JZQ2NOR1IVDRVeWlZQUhhHWVKFCVA50VGxVWUxUNFQKFCVA50OUwJWKFCVA50KFCVA508OGgYODwQaKFCVA50wFRVRpVVVVWGlYOKFCVA50g8BUw9TBKFCVA50EKFCVA50BhVK" alt="服主" loading="lazy"></div>
+                        <h3 class="team-name">ShirokoABDS</h3>
+                        <p class="team-role">创始人 / 主维护</p>
+                        <p class="team-desc">天天开个破服务器</p>
+                        <a href="https://shirokoabds.github.io" class="team-contact-btn">联系服主</a>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://d2.qyun.store/s/TBVWTxUNFVRRKFCVA50QNSKFCVA50Q8OGgYOVKFCVA504aKFCVA501EOVhoOKFCVA50KFCVA50KFCVA50GGgKFCVA50GKFCVA501JTVlIPDwVRVhUbFVhERH9YREMVDRVYREQZRk5CWRlYRVKFCVA50VGxVYRER8Uk4VDRVCR1tYVlMYBQcFKFCVA50RgHKFCVA50hgFBBhUBKFCVA50NRUw8GBBoPDwMEGgMPKFCVA50lIaVgZUDxoGU1IEBQBSDw5VDgEZVV5ZFRsVVlQVDRVSBQ4FKFCVA50wKFCVA50KFCVA50KFCVA50RpVKFCVA50KFCVA509RGgNTBVYaVQcOUhoKFCVA50VgBVUg4FVVUDBgQVGxVZVlpSFQ0VYkRSRVpSW1hZBQcFKFCVA50hlHWVKFCVA50VGxVUWFlDUllDY05HUhUNFV5aVlBSGEdZUBUbFVZTFQ0VKFCVA50FEBKFCVA50gMHKFCVA50wcaDwBTKFCVA50RoDKFCVA50Q5VGg4EVQQaKFCVA50KFCVA504DDwMKFCVA50BKFCVA50JUUVJUFUo=" alt="技术" loading="lazy"></div>
+                        <h3 class="team-name">Usermelon2024</h3>
+                        <p class="team-role">技术顾问</p>
+                        <p class="team-desc">插件开发 & 性能优化，让游戏机制更丝滑。</p>
+                        <a href="#" class="team-contact-btn">技术咨询</a>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://d6.qyshare.store/s/TBVWTxUNFVIEBFUKFCVA50VQYHGgRRKFCVA50QYaKFCVA501FUBBpWDgJRGg5TVKFCVA50EGVQUKFCVA50VVMFVBUbFVhERH9YREMVDRVYREQZRk5CWRlYRVKFCVA50VGxVYRER8Uk4VDRVCR1tYVlMYBQcFKFCVA50RgHKFCVA50hgFBBgPKFCVA50wUGKFCVA50QcPBRoOUlJVGgNRU1YaD1JUURoCBwVUDlMCVKFCVA50FRBFEZVV5ZFRsVVlQVDRUKFCVA50KFCVA50wEFBKFCVA50IGURpUVKFCVA50YPGgNTVlEaDlQOVhoHBgRRUwcDDlEDU1QVGxVZVlpSFQ0VZFJFQVJFe3QZR1lQFRsVVFhZQ1JZQ2NOR1IVDRVeWlZQUhhHWVKFCVA50VGxVWUxUNFQFVU1ZWUQ4KFCVA50GgBRBgUaKFCVA50wRTVRoOD1QCGgEGUwRUVlUKFCVA50BwMCKFCVA50RVK" alt="社区管理" loading="lazy"></div>
+                        <h3 class="team-name">ServerLC</h3>
+                        <p class="team-role">风纪委员</p>
+                        <p class="team-desc">这是个啥子↑</p>
+                        <a href="#" class="team-contact-btn">反馈建议</a>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://d2.qyun.store/s/TBVWTxUNFQZUDlYEDwUCGgYPKFCVA50QUaKFCVA50wcPDxpVKFCVA50KFCVA50RTGgMBUQcFKFCVA501QHBwBVBRUbFVhERH9YREMVDRVYREQZRk5CWRlYRVKFCVA50VGxVYRER8Uk4VDRVCR1tYVlMYBQcFKFCVA50RgHKFCVA50hgFBBhUBgZSBQIDBRoGVKFCVA504HGgMHUw8aD1ZSURpWDlMDVlFTBgNUVQIZVV5ZFRsVVlQVDRVTVKFCVA50ZVDg9TVhoHKFCVA50wKFCVA50GGgMEVKFCVA50EaVgYDKFCVA50xoGKFCVA50VNSKFCVA50Q9UDwdVDwcVGxVZVlpSFQ0VdHlKFCVA50Qk5eWVKFCVA50ZR1lQFRsVVFhZQ1JZQ2NOR1IVDRVeWlZQUhhHWVKFCVA50VGxVWUxUNFVQKFCVA50BVRTKFCVA50Q5RGlUGKFCVA50KFCVA50caKFCVA50wKFCVA50FBxpVVlQFGg4KFCVA50U1YGBwKFCVA50OD1UCBhVK" alt="建筑组" loading="lazy"></div>
+                        <h3 class="team-name">CNwuying</h3>
+                        <p class="team-role">首席建筑师</p>
+                        <p class="team-desc">666还是投影大蛇</p>
+                        <a href="#" class="team-contact-btn">作品欣赏</a>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-avatar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://d2.qyun.store/s/TBVWTxUNFVMEUwKFCVA50OBwUBGlVWDlQaKFCVA50w9WVBoOVQBRGgIGVKFCVA50KFCVA50GKFCVA50QUPUgVTDhUbFVhERH9YREMVDRVYREQZRk5CWRlYRVKFCVA50VGxVYRER8Uk4VDRVCR1tYVlMYBQcFKFCVA50RgHKFCVA50hgFBBhUVQFRVKFCVA504GBhoDBVEOGgNTBVUaVVJSBRoEKFCVA50VMFBKFCVA50ZWKFCVA50w9WDgYZVV5ZFRsVVlQVDRUOBFNWKFCVA50Q5TUxoEBwYHGgNUUgQaDg5UKFCVA50BoEVQIBKFCVA50KFCVA50MKFCVA50KFCVA501MGKFCVA50KFCVA50UVGxVZVlpSFQ0V35S20r6d0K2z0qux0oqV0qyJ0L6wGUdZUBUbFVRYWUNSWUNjTkdSFQ0VXlpWUFIYR1lQFRsVVlMVDRUFBVEFKFCVA50wVVKFCVA50RpWKFCVA50KFCVA50YHGgMCKFCVA50VEaVgBVURpTKFCVA50VYOKFCVA50wNWVKFCVA504PKFCVA50FMVSg==" alt="反作弊" loading="lazy"></div>
+                        <h3 class="team-name">Anticheat</h3>
+                        <p class="team-role">反作弊巡查</p>
+                        <p class="team-desc">To all admin</p>
+                        <a href="#" class="team-contact-btn">举报通道</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 社区聚合 (QQ & 微信) -->
+    <section id="community" class="community-section" data-bg="url('./png/wj_Narcissa_3.png')">
+        <div class="container">
+            <div class="section-header scroll-fade-up"><h2 class="section-title">💬 加入玩家聚集地</h2><p class="section-subtitle">第一时间获取资讯 & 开黑组队</p></div>
+            <div class="community-grid">
+                <div class="community-card scroll-fade-up delay-100"><div class="community-icon-wrapper"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="./png/QQ.png" alt="QQ群" class="community-icon-img" loading="lazy"></div><h3>Wtcraft 官方QQ群</h3><p>聊天 / 活动 / 通知，80人活跃社群</p><div class="qr-placeholder"><div class="qr-code"></div><span>.</data-src></span></div><a href="https://qm.qq.com/q/KwFOyhPWcW" class="community-btn qq-btn">一键加群</a></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 (保留原作版权，并标注Wtcraft二开) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo" id="footerLogo"><svg class="footer-logo-svg" width="24" height="24"><use href="#icon-cube"/></svg><span class="footer-logo-text">Wtcraft 生存服务器</span></a>
+                <p class="footer-desc">纯净生存 + 友好社区 + 永不删档 | 我们因热爱而聚集。</p>
+                <p class="footer-desc" style="font-size:12px; opacity:0.7;">✨ 基于小狐狸生存服模板二次开发 · 致敬原作小狐务器团队 ✨</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column"><h4>探索</h4><ul><li><a href="#home">首页</a></li><li><a href="#help-docs">加入教程</a></li><li><a href="#features">玩法特色</a></li></ul></div>
+                <div class="footer-column"><h4>社区</h4><ul><li><a href="#gallery">视觉相册</a></li><li><a href="#team">团队成员</a></li><li><a href="#contact">联系支持</a></li><li><a href="#community">玩家社群</a></li></ul></div>
+                <div class="footer-column"><h4>资源</h4><ul id="footerFriendLinks"><li><a href="https://mc.163.com/">我的世界中国版</a></li><li><a href="https://www.minecraft.net/">Minecraft 官网</a></li><li><a href="#">Wtcraft 论坛</a></li></ul></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>© 2025 Wtcraft 服务器. 保留部分权利 | 基于开源模板二次开发，保留原作版权声明</p><p class="disclaimer">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p><p style="font-size: 12px; margin-top: 8px;">【二开请标注原作者小狐务器 —— 尊重原创，感谢共享】</p></div></div>
+    </footer>
+    <script src="script.js?v=2" defer></script>
+</body>
 </html>
